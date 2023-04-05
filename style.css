@@ -1,0 +1,75 @@
+.img {
+    width: 50px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+#navbar {
+    font-family: "Poppins";
+    text-align: center;
+    background: #a2ed91;
+}
+
+#navbar #navbarSupportedContent .nav-item {
+    width: 160px;
+    text-align: center;
+    color: #000;
+    float: left;
+}
+
+.btn-menu {
+    background: #a2ed91;
+    border-radius: 50px;
+    padding: 9px 10px 5px 10px;
+    color: #000
+}
+
+.btn-menu:hover {
+    background: #fff;
+    color: #fff;
+    text-decoration: none;
+}    
+
+.about, .faq {
+    color: #000;
+    text-decoration: none;
+    padding-top: 20px;
+}
+
+.location {
+    padding-top: 20px;
+}
+
+.logo-foot {
+    width: 100px;
+}
+
+.footer{
+    font-family: "Poppins";
+    background: #a2ed91;
+    color: black; 
+}
+
+.footer-text {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 60px;
+}
+
+.section-index {
+    font-family: "Poppins";
+    padding: 50px 0 0 0;
+    justify-content: center;
+}
+
+.text1 {
+    padding: 50px 15px 10px 20px;
+}
+
+.image-web {
+    height: 250px;
+}
+
+#icon {
+    width: 30px;
+}
