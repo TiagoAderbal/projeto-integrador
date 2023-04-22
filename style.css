@@ -73,3 +73,12 @@
 #icon {
     width: 30px;
 }
+
+.inputBox {
+    display: flex;
+    padding: auto;
+}
+
+.fale_con {
+    font-family: "Poppins";
+}
