@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-    <title>Tiago Aderbal</title>
+    <title>PI - Polo Pederneiras</title>
 </head>
 
 <body>
@@ -31,23 +31,24 @@
     <!-- ENDING NAVBAR -->
 
     <section class="container fale_con">
-        <form>
+        <form action="data.php" method="POST">
             <h1 class="pt-5 pb-5">Fale conosco</h1>
             <div class="form-group">
                 <label for="exampleInputName">Nome</label>
-                <input class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Seu nome...">
+                <input class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Seu nome..."
+                    name="nome" required>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail">Email</label>
                 <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"
-                    placeholder="Seu email...">
+                    placeholder="Seu email..." name="email" required>
             </div>
             <div class="form-group">
                 <label for="exampleInputTel">Telefone</label>
                 <input type="tel" class="form-control" id="exampleInputTel" aria-describedby="telHelp"
-                    placeholder="(xx)xxxxx-xxxx">
+                    placeholder="(xx)xxxxx-xxxx" name="tel" required>
             </div>
-            <div class="sexo">
+            <!-- <div class="sexo">
                 <p>Sexo</p>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
@@ -63,24 +64,24 @@
                     Feminino
                     </label>
                 </div>
-            </div>
-            <br>
+            </div> -->
             <div>
                 <label for="diaa">Data de nascimento: </label>
-                <input type="date" id="diaa" name="diaa">
+                <input type="date" id="diaa" name="datanasc" required>
             </div>
             <br>
             <div class="form-group">
                 <label for="exampleInputEnd">Endereço</label>
                 <input class="form-control" id="exampleInputEnd" aria-describedby="endHelp"
-                    placeholder="Endereço completo...">
+                    placeholder="Endereço completo..." name="endereco" required>
             </div>
             <br>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Deixe sua mensagem:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                    placeholder="Digite sua mensagem..." name="mensagem" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" name="enviar" class="btn btn-primary">Enviar</button>
         </form>
     </section>
 
