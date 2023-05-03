@@ -1,5 +1,5 @@
 <?php
-    $dbHost = 'Localhost';
+    $dbHost = 'https://github.com/TiagoAderbal/projeto-integrador';
     $dbUsername = 'root';
     $dbPassword = '';
     $dbName = 'cadastro';
@@ -30,6 +30,8 @@
 
         $result= mysqli_query($conexao, "INSERT INTO projeto(nome, email, tel, datanasc, endereco, mensagem) 
         VALUES ('$nome', '$email', '$tel', '$datanasc', '$endereco', '$mensagem')");
+
+        echo "Dados salvos com sucesso";
     }
 
     // if($conexao->connect_errno){
