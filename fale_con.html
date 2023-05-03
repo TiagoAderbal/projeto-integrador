@@ -30,20 +30,59 @@
     </nav>
     <!-- ENDING NAVBAR -->
 
-    <section class="container section-index">
-        <div class="row">
-            <div class="col-md-8">
-                <h1 class="text-center">Sejam Bem-vindos!</h1>
-                <p class="text1">
-                    Bem-vindo(a) ao mundo da tecnologia moderna!
-                    Esse é um sistema web, desenvolvido para suprir uma necessidade de um comércio local. Utilizamos
-                    html e css com Bootstrap, SQLite para gestão do Banco de Dados e GitHub como hospedagem.
-                </p>
+    <section class="container fale_con">
+        <form action="data.php" method="POST">
+            <h1 class="pt-5 pb-5">Fale conosco</h1>
+            <div class="form-group">
+                <label for="exampleInputName">Nome</label>
+                <input class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Seu nome..."
+                    name="nome" required>
             </div>
-            <div class="col-md-4" id="imgcol">
-                <img class="image-web" src="images/Web-Design.png">
+            <div class="form-group">
+                <label for="exampleInputEmail">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"
+                    placeholder="Seu email..." name="email" required>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="exampleInputTel">Telefone</label>
+                <input type="tel" class="form-control" id="exampleInputTel" aria-describedby="telHelp"
+                    placeholder="(xx)xxxxx-xxxx" name="tel" required>
+            </div>
+            <!-- <div class="sexo">
+                <p>Sexo</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                        value="option1">
+                    <label class="form-check-label" for="option1">
+                        Masculino
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                        value="option2">
+                    <label class=" form-check-label" for="option2">
+                    Feminino
+                    </label>
+                </div>
+            </div> -->
+            <div>
+                <label for="diaa">Data de nascimento: </label>
+                <input type="date" id="diaa" name="datanasc" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="exampleInputEnd">Endereço</label>
+                <input class="form-control" id="exampleInputEnd" aria-describedby="endHelp"
+                    placeholder="Endereço completo..." name="endereco" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Deixe sua mensagem:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                    placeholder="Digite sua mensagem..." name="mensagem" required></textarea>
+            </div>
+            <button type="submit" name="enviar" class="btn btn-primary">Enviar</button>
+        </form>
     </section>
 
     <!-- START FOOTER -->
