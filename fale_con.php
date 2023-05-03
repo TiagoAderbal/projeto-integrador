@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <title>PI - Polo Pederneiras</title>
+</head>
+
+<body>
+
+<?php
+    if(isset($_POST['enviar'])){
+        // print_r($_POST['nome']);
+        // print_r('<br>');
+        // print_r($_POST['email']);
+        // print_r('<br>');
+        // print_r($_POST['tel']);
+        // print_r('<br>');
+        // print_r($_POST['datanasc']);
+        // print_r('<br>');
+        // print_r($_POST['endereco']);
+        // print_r('<br>');
+        // print_r($_POST['mensagem']);
+
+        include_once('data.php');
+
+        $nome= $_POST['nome'];
+        $email= $_POST['email'];
+        $tel= $_POST['tel'];
+        $datanasc= $_POST['datanasc'];
+        $endereco= $_POST['endereco'];
+        $mensagem= $_POST['mensagem'];
+
+        $result= mysqli_query($conexao, "INSERT INTO projeto(nome, email, tel, datanasc, endereco, mensagem) 
+        VALUES ('$nome', '$email', '$tel', '$datanasc', '$endereco', '$mensagem')");
+
+        echo "Dados salvos com sucesso";
+    }
+?>
+
+    <!-- START NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light container-fluid" id="navbar">
+        <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="img-responsive img"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse justify-content-end collapse" id="navbarSupportedContent">
+            <a class="nav-item nav-link active" href="index.html">Página Inicial</a>
+            <a class="nav-item nav-link" href="sobre.html">Sobre</a>
+            <a class="nav-item nav-link" href="fale_con.php">Fale conosco</a>
+        </div>
+    </nav>
+    <!-- ENDING NAVBAR -->
+
+    <section class="container fale_con">
+        <form action="fale_con.php" method="POST">
+            <h1 class="pt-5 pb-5">Fale conosco</h1>
+            <div class="form-group">
+                <label for="exampleInputName">Nome</label>
+                <input class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Seu nome..."
+                    name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"
+                    placeholder="Seu email..." name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputTel">Telefone</label>
+                <input type="tel" class="form-control" id="exampleInputTel" aria-describedby="telHelp"
+                    placeholder="(xx)xxxxx-xxxx" name="tel" required>
+            </div>
+            <!-- <div class="sexo">
+                <p>Sexo</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                        value="option1">
+                    <label class="form-check-label" for="option1">
+                        Masculino
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                        value="option2">
+                    <label class=" form-check-label" for="option2">
+                    Feminino
+                    </label>
+                </div>
+            </div> -->
+            <div>
+                <label for="diaa">Data de nascimento: </label>
+                <input type="date" id="diaa" name="datanasc" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="exampleInputEnd">Endereço</label>
+                <input class="form-control" id="exampleInputEnd" aria-describedby="endHelp"
+                    placeholder="Endereço completo..." name="endereco" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Deixe sua mensagem:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                    placeholder="Digite sua mensagem..." name="mensagem" required></textarea>
+            </div>
+            <button type="submit" name="enviar" class="btn btn-primary">Enviar</button>
+        </form>
+    </section>
+
+    <!-- START FOOTER -->
+    <div class="mt-5 pt-5 pb-5 footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="index.html"><img class="logo-foot" src="images/logo.png" alt=""></a>
+                </div>
+
+                <div class="col-xl-1 about">
+                    <a href="sobre.html" class="mt-lg-0 mt-sm-3 text-decoration-none text-dark">Sobre</a>
+                </div>
+
+                <div class="col-xl-2 faq">
+                    <a href="https://wa.me/5514998761501" target="_blank"
+                        class="mt-lg-0 mt-sm-3 text-decoration-none text-dark">Fale
+                        conosco</a>
+                </div>
+
+                <div class="col-xl-3 location">
+                    <h6 class="mt-lg-0 mt-sm-4">Localização</h6>
+                    <p>Rua: Sua Localização. 777. Pederneiras-SP</p>
+                </div>
+
+            </div>
+            <div class="footer-text text-center">
+                <p><small>Desenvolvido por Tiago Aderbal</small></p>
+            </div>
+        </div>
+    </div>
+    <!-- ENDING FOOTER -->
+
+    <!-- jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
