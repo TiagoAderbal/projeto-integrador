@@ -72,7 +72,7 @@
 
 .section-index {
     font-family: "Poppins";
-    padding: 50px 0 0 0;
+    padding: 100px 0 100px 0;
     justify-content: center;
 }
 
@@ -81,7 +81,7 @@
 }
 
 .image-web {
-    height: 250px;
+    height: 220px;
 }
 
 #icon {
